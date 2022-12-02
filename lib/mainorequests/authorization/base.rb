@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require "redis"
 
 module MainoRequests
   module Authorization
+    # Base class for all Auth implementations for MainoRequests
     class Base
       def initialize(request:)
         self.request = request
@@ -14,7 +17,7 @@ module MainoRequests
       end
 
       def cache_key
-        "#{request.redis_key_prefix}:token".freeze
+        "#{request.redis_key_prefix}:token"
       end
 
       def access_token

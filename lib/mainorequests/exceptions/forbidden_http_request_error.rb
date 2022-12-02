@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "mainorequests/exceptions/http_request_error"
 
 module MainoRequests

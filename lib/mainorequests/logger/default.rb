@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require "logger"
 
 module MainoRequests
   module Logger
+    # Default logger for the entire project
     class Default
       attr_reader :logger
 

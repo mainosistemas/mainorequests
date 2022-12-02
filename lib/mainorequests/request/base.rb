@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 require "mainorequests/exceptions/forbidden_http_request_error"
 require "ratelimit"
 
 module MainoRequests
   module Request
+    # Base class for all Requests implementations
     class Base
       %i[integration url_base headers authorization].each do |abstract_method|
         define_method abstract_method do
@@ -92,7 +95,7 @@ module MainoRequests
       end
 
       def ratelimit_redis_key
-        "integracao_#{redis_key_prefix}".freeze
+        "integracao_#{redis_key_prefix}"
       end
 
       def throttling_redis_key

@@ -4,6 +4,7 @@ require_relative "mainorequests/version"
 require "mainorequests/logger/default"
 require "mainorequests/request/base"
 
+# Main namespace for MainoRequests
 module MainoRequests
   class << self
     attr_reader :integration, :redis

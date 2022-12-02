@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require "logger"
 
 module MainoRequests
   module Response
+    # Base class for all Response implementations
     class Base
       attr_reader :body, :response
 

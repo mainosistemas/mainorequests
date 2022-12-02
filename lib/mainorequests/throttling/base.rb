@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require "date"
 
 module MainoRequests
   module Throttling
+    # Base class for all Throttling implementations
     class Base
       def initialize(redis_key:)
         @redis_key = redis_key
