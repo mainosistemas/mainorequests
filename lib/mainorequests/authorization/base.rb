@@ -25,7 +25,7 @@ module MainoRequests
       end
 
       def cached_token
-        @cached_token ||= Redis.current.get(cache_key)
+        @cached_token ||= redis.get(cache_key)
       end
 
       def fetch_new_token
